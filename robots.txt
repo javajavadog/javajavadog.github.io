@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://javajavadog.github.io/sitemap.xml 
