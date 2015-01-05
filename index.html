@@ -9,7 +9,11 @@
   <meta name="author" content="Xiang">
 
   
-  <meta name="description" content="Android系统在设计的时候就被设计成低耦合的，其中的一个表现就是Intent，Task的设计。 这里我们要忘掉以往传统Application的定义，在Android里面，一个应用可以是很多来自不同Application的Activity组成的，这种组成就是一个Task。 ">
+  <meta name="description" content="Android multi-screen simple rule ldpi 3
+mdpi 4
+hdpi 6
+xhdpi 8
+xxhpi 12 public static int dip2px(Context context, float dipValue) { final float scale &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +69,72 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/01/05/androidxiao-zhi-shi-ji-he-tie/">Android小知识集合贴</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-01-05T13:37:52+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>5</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:37 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Android multi-screen simple rule</p>
+
+<pre class="lang:java decode:true " >
+ldpi   3
+mdpi   4
+hdpi   6
+xhdpi  8
+xxhpi  12
+
+public static int dip2px(Context context, float dipValue) {  
+    final float scale = context.getResources().getDisplayMetrics().density;  
+    return (int) (dipValue * scale + 0.5f);  
+}  
+  
+public static int px2dip(Context context, float pxValue) {  
+    final float scale = context.getResources().getDisplayMetrics().density;  
+    return (int) (pxValue / scale + 0.5f);  
+}  
+</pre>
+
+
+<p></p>
+
+<p>点击事件的传播顺序</p>
+
+<pre class="lang:java decode:true " >
+Activity.dispatchTouchEvent()
+ViewGroup.dispatchTouchEvent()
+View.dispatchTouchEvent()
+View.onTouchEvent()
+ViewGroup.onTouchEvent()
+Activity.onTouchEvent()
+</pre>
+
+
+<p></p>
+
+<p>返回true表示该事件被消耗了，不再继续传递，返回false表示未消耗，继续往下传递。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -183,6 +253,10 @@ Blog乔迁到了github。</p>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/05/androidxiao-zhi-shi-ji-he-tie/">Android小知识集合贴</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/01/05/androidde-taskguan-li/">Android的Task管理</a>
