@@ -4,7 +4,7 @@
   <title><![CDATA[Xiang's Blog]]></title>
   <link href="http://javajavadog.github.io/atom.xml" rel="self"/>
   <link href="http://javajavadog.github.io/"/>
-  <updated>2015-01-05T12:29:37+08:00</updated>
+  <updated>2015-01-05T12:33:39+08:00</updated>
   <id>http://javajavadog.github.io/</id>
   <author>
     <name><![CDATA[Xiang]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Android的Task管理]]></title>
+    <link href="http://javajavadog.github.io/blog/2015/01/05/androidde-taskguan-li/"/>
+    <updated>2015-01-05T12:32:56+08:00</updated>
+    <id>http://javajavadog.github.io/blog/2015/01/05/androidde-taskguan-li</id>
+    <content type="html"><![CDATA[<p>Android系统在设计的时候就被设计成低耦合的，其中的一个表现就是Intent，Task的设计。</p>
+
+<p>这里我们要忘掉以往传统Application的定义，在Android里面，一个应用可以是很多来自不同Application的Activity组成的，这种组成就是一个Task。</p>
+
+<!-- more -->
+
+
+<p>例如发邮件，第一个Activity可能是你自己实现的，但是你可以启动系统Mail程序的发邮件Activity来发送，这时候第一个你自己的Activity和系统Mail程序的Activity就组合成了传统Application，Android系统将这个Application定义为Task。这个时候我们理解到了Android设计者定义一个Application是以用户完成一个具体任务来定的，而完成某个任务，其实是用户的很多意图，即Intent来连接的。</p>
+
+<p>好了，说到这里，我们就理解了Android的Task，一般的Android程序，这个Task就是由标准的Stack结构维持的多个Activity组成，遵循后进先出。</p>
+
+<p>有些时候，我们需要这个Task不遵循Stack的结构，例如某个Activity我们只允许一个实例，切换Task的时候我们想弹出一些Activity等等，这种情况，就需要我们来手动管理Task了。</p>
+
+<p>管理方式主要有2种：</p>
+
+<ol>
+<li>在AndroidManifest里的Activity标签定义lunchMode</li>
+<li>在启动Activity的Intent里设置Flag</li>
+</ol>
+
+
+<p>当两种方式都设置了时，以Intent里设置的Flag优先。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Android一般应用程序的启动过程]]></title>
