@@ -13,7 +13,16 @@
 mdpi 4
 hdpi 6
 xhdpi 8
-xxhpi 12 public static int dip2px(Context context, float dipValue) { final float scale &hellip;">
+xxhpi 12 Android multi-screen simple rule1
+2
+3
+4
+5
+6
+7
+8
+9
+public static int dip2px( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,40 +102,49 @@ xxhpi 12 public static int dip2px(Context context, float dipValue) { final float
 
   <div class="entry-content"><p>Android multi-screen simple rule</p>
 
-<pre class="lang:java decode:true " >
-ldpi   3
-mdpi   4
-hdpi   6
-xhdpi  8
-xxhpi  12
+<p>ldpi   3</br>
+mdpi   4</br>
+hdpi   6</br>
+xhdpi  8</br>
+xxhpi  12</br></p>
 
-public static int dip2px(Context context, float dipValue) {  
-    final float scale = context.getResources().getDisplayMetrics().density;  
-    return (int) (dipValue * scale + 0.5f);  
-}  
-  
-public static int px2dip(Context context, float pxValue) {  
-    final float scale = context.getResources().getDisplayMetrics().density;  
-    return (int) (pxValue / scale + 0.5f);  
-}  
-</pre>
+<figure class='code'><figcaption><span>Android multi-screen simple rule</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">dip2px</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="kt">float</span> <span class="n">dipValue</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>    <span class="kd">final</span> <span class="kt">float</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getResources</span><span class="o">().</span><span class="na">getDisplayMetrics</span><span class="o">().</span><span class="na">density</span><span class="o">;</span>
+</span><span class='line'>    <span class="k">return</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="n">dipValue</span> <span class="o">*</span> <span class="n">scale</span> <span class="o">+</span> <span class="mf">0.5f</span><span class="o">);</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">px2dip</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="kt">float</span> <span class="n">pxValue</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>    <span class="kd">final</span> <span class="kt">float</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getResources</span><span class="o">().</span><span class="na">getDisplayMetrics</span><span class="o">().</span><span class="na">density</span><span class="o">;</span>
+</span><span class='line'>    <span class="k">return</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="n">pxValue</span> <span class="o">/</span> <span class="n">scale</span> <span class="o">+</span> <span class="mf">0.5f</span><span class="o">);</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
-
-<p></p>
 
 <p>点击事件的传播顺序</p>
 
-<pre class="lang:java decode:true " >
-Activity.dispatchTouchEvent()
-ViewGroup.dispatchTouchEvent()
-View.dispatchTouchEvent()
-View.onTouchEvent()
-ViewGroup.onTouchEvent()
-Activity.onTouchEvent()
-</pre>
+<figure class='code'><figcaption><span>touch event</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">Activity</span><span class="o">.</span><span class="na">dispatchTouchEvent</span><span class="o">()</span>
+</span><span class='line'><span class="n">ViewGroup</span><span class="o">.</span><span class="na">dispatchTouchEvent</span><span class="o">()</span>
+</span><span class='line'><span class="n">View</span><span class="o">.</span><span class="na">dispatchTouchEvent</span><span class="o">()</span>
+</span><span class='line'><span class="n">View</span><span class="o">.</span><span class="na">onTouchEvent</span><span class="o">()</span>
+</span><span class='line'><span class="n">ViewGroup</span><span class="o">.</span><span class="na">onTouchEvent</span><span class="o">()</span>
+</span><span class='line'><span class="n">Activity</span><span class="o">.</span><span class="na">onTouchEvent</span><span class="o">()</span>
+</span></code></pre></td></tr></table></div></figure>
 
-
-<p></p>
 
 <p>返回true表示该事件被消耗了，不再继续传递，返回false表示未消耗，继续往下传递。</p>
 </div>
