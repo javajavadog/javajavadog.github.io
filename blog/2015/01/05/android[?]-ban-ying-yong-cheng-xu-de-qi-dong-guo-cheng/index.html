@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Xiang&#8217;s Blog</title>
+  <title>Android一般应用程序的启动过程 - Xiang&#8217;s Blog</title>
   <meta name="author" content="Xiang">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://javajavadog.github.io">
+  <link rel="canonical" href="http://javajavadog.github.io/blog/2015/01/05/android%5B%3F%5D-ban-ying-yong-cheng-xu-de-qi-dong-guo-cheng">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Xiang's Blog" type="application/atom+xml">
@@ -63,15 +63,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2015/01/05/android%5B%3F%5D-ban-ying-yong-cheng-xu-de-qi-dong-guo-cheng/">Android一般应用程序的启动过程</a></h1>
+      <h1 class="entry-title">Android一般应用程序的启动过程</h1>
     
     
       <p class="meta">
@@ -87,7 +84,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Android一般应用程序的启动过程</p>
+<div class="entry-content"><p>Android一般应用程序的启动过程</p>
 
 <p>任何应用程序都有一个启动的入口。例如机器语言的应用程序，入口即是和硬件约定好的数据摆放位置，汇编语言则一般是寄存器中指令指针所指的位置，C语言一般是main方法，Java则是static main方法。</p>
 
@@ -95,53 +92,68 @@
 
 <p>本文想分析的是，在点击Launcher上面的icon后，onCreate()之前，到底发生了什么。C层的东西，如何创建进程之类的，暂时不分析(zygote这名字取得蛮有创意)，我们从Java代码开始。</p>
 
+<!--more-->
+
+
+<p>ActivityThread
+这个类是很重要的入口类，在这里我们也可以看到熟悉的public static void main(String[] args)方法。</p>
+
+<p>main执行后，执行了一个重要的方法prepareMainLooper()，该方法配合线程本地存储，给本线程创建了一个MessageQueue，并且让本线程成为了主线程，也是我们常说的UI线程。</p>
+
+<p>prepareMainLooper()之后，实例化了ActivityThread，实例化ActivityThread的时候，同时实例化了H类和ApplicationThread类，H类是一个Handler，ApplicationThread类是一个Binder。此时的H类所对应的Looper是MainLooper。</p>
+
+<p>实例化ActivityThread之后，执行了一个重要的方法activityThread.attach()。attach时把前面的ApplicationThread类作为Binder丢给了Runtime，接收ActivityManagerService的IPC消息，当IPC消息来的时候，实际上ApplicationThread并不会直接处理，而是通过前面的H类将消息丢到MainLooper的MessageQueue中，等待执行。</p>
+
+<p>接下来会执行到Looper.loop()方法，该方法会将MainLooper对应MessageQueue中的消息拿出来处理，并一直循环下去。</p>
+
+<p>ActivityManagerService发送启动Activity的指令，前面的ApplicationThread将其通过H丢到MessageQueue中，Looper执行它来启动Activity。</p>
+
+<p>接下来就到了H中的handleLaunchActivity，终于Activity要启动了。通过java的newInstance方式创建出了activity的实例（原来activity是这里new出来的）。启动Activity的时候，会检查是否有了Application，如果没有就创建并启动一个，就是那个我们常用的放全局变量的东西。</p>
+
+<p>activity有了之后，又执行了一个重要方法，activity.attach()，此方法创建了Window类并绑到了WindowManager，这个Window是一个PhoneWindow，PhoneWindow有一个继承于FrameLayout的DecorView，这个东西就是显示我们UI的容器了。创建DecorView的时候，会根据后面set的主题等创建出Title，Background等。</p>
+
+<p>然后是setTheme，performCreate，performStart……我们会实现对应的onCreate()，onStart()……你懂的。</p>
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2015/01/05/android%5B%3F%5D-ban-ying-yong-cheng-xu-de-qi-dong-guo-cheng/">Read on &rarr;</a>
-    </footer>
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Xiang</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-01-05T12:28:12+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>5</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:28 pm</span></time>
+      
+
+
+    </p>
     
-      <h1 class="entry-title"><a href="/blog/2015/01/05/blogqian-xi-dao-github/">Blog迁徙到github</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2015-01-05T10:46:59+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>5</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>10:46 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Congratulations!</br></br>
-Blog乔迁到了github。</p>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://javajavadog.github.io/blog/2015/01/05/android%5B%3F%5D-ban-ying-yong-cheng-xu-de-qi-dong-guo-cheng/" data-via="" data-counturl="http://javajavadog.github.io/blog/2015/01/05/android%5B%3F%5D-ban-ying-yong-cheng-xu-de-qi-dong-guo-cheng/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/01/05/blogqian-xi-dao-github/" title="Previous Post: Blog迁徙到github">&laquo; Blog迁徙到github</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -165,6 +177,7 @@ Blog乔迁到了github。</p>
 
   
 </aside>
+
 
     </div>
   </div>
