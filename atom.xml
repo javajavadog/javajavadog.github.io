@@ -4,7 +4,7 @@
   <title><![CDATA[Xiang's Blog]]></title>
   <link href="http://javajavadog.github.io/atom.xml" rel="self"/>
   <link href="http://javajavadog.github.io/"/>
-  <updated>2015-01-05T13:56:30+08:00</updated>
+  <updated>2015-01-06T22:08:54+08:00</updated>
   <id>http://javajavadog.github.io/</id>
   <author>
     <name><![CDATA[Xiang]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Launch iOS/Android App From Browser]]></title>
+    <link href="http://javajavadog.github.io/blog/2015/01/06/how-to-launch-ios-slash-android-app-from-browser/"/>
+    <updated>2015-01-06T21:49:16+08:00</updated>
+    <id>http://javajavadog.github.io/blog/2015/01/06/how-to-launch-ios-slash-android-app-from-browser</id>
+    <content type="html"><![CDATA[<p>iOS:
+1. use smart app banners
+refer: <a href="https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html">https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html</a>
+2. use URL schema</p>
+
+<p>Android: use custom URL</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Android小知识集合贴]]></title>
