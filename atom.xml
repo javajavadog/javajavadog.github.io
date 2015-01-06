@@ -4,7 +4,7 @@
   <title><![CDATA[Xiang's Blog]]></title>
   <link href="http://javajavadog.github.io/atom.xml" rel="self"/>
   <link href="http://javajavadog.github.io/"/>
-  <updated>2015-01-06T22:08:54+08:00</updated>
+  <updated>2015-01-06T22:13:49+08:00</updated>
   <id>http://javajavadog.github.io/</id>
   <author>
     <name><![CDATA[Xiang]]></name>
@@ -19,9 +19,9 @@
     <updated>2015-01-06T21:49:16+08:00</updated>
     <id>http://javajavadog.github.io/blog/2015/01/06/how-to-launch-ios-slash-android-app-from-browser</id>
     <content type="html"><![CDATA[<p>iOS:
-1. use smart app banners
-refer: <a href="https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html">https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html</a>
-2. use URL schema</p>
+1. use smart app banners<br/>
+refer: <a href="https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html">https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html</a><br/>
+2. use URL schema<br/><br/></p>
 
 <p>Android: use custom URL</p>
 ]]></content>
