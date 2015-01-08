@@ -13,16 +13,7 @@
 mdpi 4
 hdpi 6
 xhdpi 8
-xxhpi 12 Android multi-screen simple rule1
-2
-3
-4
-5
-6
-7
-8
-9
-public static int dip2px( &hellip;">
+xxhpi 12 To create alternative bitmap drawables for different densities, you should &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -104,6 +95,16 @@ mdpi   4</br>
 hdpi   6</br>
 xhdpi  8</br>
 xxhpi  12</br></p>
+
+<p>To create alternative bitmap drawables for different densities, you should follow the 3:4:6:8:12:16 scaling ratio between the six generalized densities. For example, if you have a bitmap drawable that&rsquo;s 48x48 pixels for medium-density screens, all the different sizes should be:</p>
+
+<pre><code>36x36 (0.75x) for low-density
+    48x48 (1.0x baseline) for medium-density
+    72x72 (1.5x) for high-density
+        96x96 (2.0x) for extra-high-density
+        180x180 (3.0x) for extra-extra-high-density
+            192x192 (4.0x) for extra-extra-extra-high-density (launcher icon only; see note above)
+</code></pre>
 
 <figure class='code'><figcaption><span>Android multi-screen simple rule</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
