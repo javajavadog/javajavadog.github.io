@@ -4,7 +4,7 @@
   <title><![CDATA[Xiang's Blog]]></title>
   <link href="http://javajavadog.github.io/atom.xml" rel="self"/>
   <link href="http://javajavadog.github.io/"/>
-  <updated>2015-01-08T16:47:43+08:00</updated>
+  <updated>2015-01-12T10:10:10+08:00</updated>
   <id>http://javajavadog.github.io/</id>
   <author>
     <name><![CDATA[Xiang]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[UML类图及几个例子]]></title>
+    <link href="http://javajavadog.github.io/blog/2015/01/12/umllei-tu-ji-ji-ge-li-zi/"/>
+    <updated>2015-01-12T09:46:59+08:00</updated>
+    <id>http://javajavadog.github.io/blog/2015/01/12/umllei-tu-ji-ji-ge-li-zi</id>
+    <content type="html"><![CDATA[<p>最近想花一些时间总结一下常用的设计模式，描述各种设计模式，UML类图是必不可少的工具，这里来简单复习一下UML类图。</p>
+
+
+<p>UML中描述类之间相互关系主要有下面几大类：</p>
+
+
+<ul>
+    <li>Dependency 依赖</li>
+    <li>Association 关联</li>
+    <li>Aggregation 聚合</li>
+    <li>Composition 组合</li>
+    <li>Generalization 泛化</li>
+    <li>Realization 实现</li>
+</ul>
+
+
+<p>UML类图对关系的表达：</p>
+
+
+<ul>
+    <li>Dependency 带箭头的虚线表示依赖，箭头指向被依赖元素</li>
+    <li>Association 带箭头的实线表示关联，双向的关联可以有两个箭头或者没有箭头</li>
+    <li>Aggregation 带空心菱形头实线表示，菱形头指向整体</li>
+    <li>Composition 实心菱形头实线表示</li>
+    <li>Generalization 带空心箭头的实线，空心箭头指向被继承的类</li>
+    <li>Realization 带空心箭头的虚线，空心箭头指向被实现的类或接口</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Launch iOS/Android App From Browser]]></title>
