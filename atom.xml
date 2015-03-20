@@ -4,7 +4,7 @@
   <title><![CDATA[Xiang's Blog]]></title>
   <link href="http://javajavadog.github.io/atom.xml" rel="self"/>
   <link href="http://javajavadog.github.io/"/>
-  <updated>2015-01-12T10:10:10+08:00</updated>
+  <updated>2015-03-21T01:59:34+08:00</updated>
   <id>http://javajavadog.github.io/</id>
   <author>
     <name><![CDATA[Xiang]]></name>
@@ -50,7 +50,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to Launch iOS/Android App From Browser]]></title>
+    <title type="html"><![CDATA[How to launch iOS/Android app from browser]]></title>
     <link href="http://javajavadog.github.io/blog/2015/01/06/how-to-launch-ios-slash-android-app-from-browser/"/>
     <updated>2015-01-06T21:49:16+08:00</updated>
     <id>http://javajavadog.github.io/blog/2015/01/06/how-to-launch-ios-slash-android-app-from-browser</id>
