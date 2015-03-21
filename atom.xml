@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[imwmw.com]]></title>
+  <title><![CDATA[imwmw]]></title>
   <link href="http://javajavadog.github.io/atom.xml" rel="self"/>
   <link href="http://javajavadog.github.io/"/>
-  <updated>2015-03-22T00:55:38+08:00</updated>
+  <updated>2015-03-22T01:06:16+08:00</updated>
   <id>http://javajavadog.github.io/</id>
   <author>
     <name><![CDATA[Xiang]]></name>
@@ -14,194 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[UML类图及几个例子]]></title>
-    <link href="http://javajavadog.github.io/blog/2015/01/12/umllei-tu-ji-ji-ge-li-zi/"/>
-    <updated>2015-01-12T09:46:59+08:00</updated>
-    <id>http://javajavadog.github.io/blog/2015/01/12/umllei-tu-ji-ji-ge-li-zi</id>
-    <content type="html"><![CDATA[<p>最近想花一些时间总结一下常用的设计模式，描述各种设计模式，UML类图是必不可少的工具，这里来简单复习一下UML类图。</p>
-
-
-<p>UML中描述类之间相互关系主要有下面几大类：</p>
-
-
-<ul>
-    <li>Dependency 依赖</li>
-    <li>Association 关联</li>
-    <li>Aggregation 聚合</li>
-    <li>Composition 组合</li>
-    <li>Generalization 泛化</li>
-    <li>Realization 实现</li>
-</ul>
-
-
-<p>UML类图对关系的表达：</p>
-
-
-<ul>
-    <li>Dependency 带箭头的虚线表示依赖，箭头指向被依赖元素</li>
-    <li>Association 带箭头的实线表示关联，双向的关联可以有两个箭头或者没有箭头</li>
-    <li>Aggregation 带空心菱形头实线表示，菱形头指向整体</li>
-    <li>Composition 实心菱形头实线表示</li>
-    <li>Generalization 带空心箭头的实线，空心箭头指向被继承的类</li>
-    <li>Realization 带空心箭头的虚线，空心箭头指向被实现的类或接口</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to launch iOS/Android app from browser]]></title>
-    <link href="http://javajavadog.github.io/blog/2015/01/06/how-to-launch-ios-slash-android-app-from-browser/"/>
-    <updated>2015-01-06T21:49:16+08:00</updated>
-    <id>http://javajavadog.github.io/blog/2015/01/06/how-to-launch-ios-slash-android-app-from-browser</id>
-    <content type="html"><![CDATA[<p>iOS:
-1. use smart app banners<br/>
-refer: <a href="https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html">https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html</a><br/>
-2. use URL schema<br/><br/></p>
-
-<p>Android: use custom URL</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Android小知识集合贴]]></title>
-    <link href="http://javajavadog.github.io/blog/2015/01/05/androidxiao-zhi-shi-ji-he-tie/"/>
-    <updated>2015-01-05T13:37:52+08:00</updated>
-    <id>http://javajavadog.github.io/blog/2015/01/05/androidxiao-zhi-shi-ji-he-tie</id>
-    <content type="html"><![CDATA[<p>Android multi-screen simple rule</p>
-
-<p>ldpi   3</br>
-mdpi   4</br>
-hdpi   6</br>
-xhdpi  8</br>
-xxhpi  12</br></p>
-
-<p>To create alternative bitmap drawables for different densities, you should follow the 3:4:6:8:12:16 scaling ratio between the six generalized densities. For example, if you have a bitmap drawable that&rsquo;s 48x48 pixels for medium-density screens, all the different sizes should be:</p>
-
-<pre><code>36x36 (0.75x) for low-density
-    48x48 (1.0x baseline) for medium-density
-    72x72 (1.5x) for high-density
-        96x96 (2.0x) for extra-high-density
-        180x180 (3.0x) for extra-extra-high-density
-            192x192 (4.0x) for extra-extra-extra-high-density (launcher icon only; see note above)
-</code></pre>
-
-<figure class='code'><figcaption><span>Android multi-screen simple rule</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">dip2px</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="kt">float</span> <span class="n">dipValue</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>    <span class="kd">final</span> <span class="kt">float</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getResources</span><span class="o">().</span><span class="na">getDisplayMetrics</span><span class="o">().</span><span class="na">density</span><span class="o">;</span>
-</span><span class='line'>    <span class="k">return</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="n">dipValue</span> <span class="o">*</span> <span class="n">scale</span> <span class="o">+</span> <span class="mf">0.5f</span><span class="o">);</span>
-</span><span class='line'><span class="o">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">px2dip</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="kt">float</span> <span class="n">pxValue</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>    <span class="kd">final</span> <span class="kt">float</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getResources</span><span class="o">().</span><span class="na">getDisplayMetrics</span><span class="o">().</span><span class="na">density</span><span class="o">;</span>
-</span><span class='line'>    <span class="k">return</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="n">pxValue</span> <span class="o">/</span> <span class="n">scale</span> <span class="o">+</span> <span class="mf">0.5f</span><span class="o">);</span>
-</span><span class='line'><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>点击事件的传播顺序</p>
-
-<figure class='code'><figcaption><span>touch event</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">Activity</span><span class="o">.</span><span class="na">dispatchTouchEvent</span><span class="o">()</span>
-</span><span class='line'><span class="n">ViewGroup</span><span class="o">.</span><span class="na">dispatchTouchEvent</span><span class="o">()</span>
-</span><span class='line'><span class="n">View</span><span class="o">.</span><span class="na">dispatchTouchEvent</span><span class="o">()</span>
-</span><span class='line'><span class="n">View</span><span class="o">.</span><span class="na">onTouchEvent</span><span class="o">()</span>
-</span><span class='line'><span class="n">ViewGroup</span><span class="o">.</span><span class="na">onTouchEvent</span><span class="o">()</span>
-</span><span class='line'><span class="n">Activity</span><span class="o">.</span><span class="na">onTouchEvent</span><span class="o">()</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>返回true表示该事件被消耗了，不再继续传递，返回false表示未消耗，继续往下传递。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Android的Task管理]]></title>
-    <link href="http://javajavadog.github.io/blog/2015/01/05/androidde-taskguan-li/"/>
-    <updated>2015-01-05T12:32:56+08:00</updated>
-    <id>http://javajavadog.github.io/blog/2015/01/05/androidde-taskguan-li</id>
-    <content type="html"><![CDATA[<p>Android系统在设计的时候就被设计成低耦合的，其中的一个表现就是Intent，Task的设计。</p>
-
-<p>这里我们要忘掉以往传统Application的定义，在Android里面，一个应用可以是很多来自不同Application的Activity组成的，这种组成就是一个Task。</p>
-
-<!-- more -->
-
-
-<p>例如发邮件，第一个Activity可能是你自己实现的，但是你可以启动系统Mail程序的发邮件Activity来发送，这时候第一个你自己的Activity和系统Mail程序的Activity就组合成了传统Application，Android系统将这个Application定义为Task。这个时候我们理解到了Android设计者定义一个Application是以用户完成一个具体任务来定的，而完成某个任务，其实是用户的很多意图，即Intent来连接的。</p>
-
-<p>好了，说到这里，我们就理解了Android的Task，一般的Android程序，这个Task就是由标准的Stack结构维持的多个Activity组成，遵循后进先出。</p>
-
-<p>有些时候，我们需要这个Task不遵循Stack的结构，例如某个Activity我们只允许一个实例，切换Task的时候我们想弹出一些Activity等等，这种情况，就需要我们来手动管理Task了。</p>
-
-<p>管理方式主要有2种：</p>
-
-<ol>
-<li>在AndroidManifest里的Activity标签定义lunchMode</li>
-<li>在启动Activity的Intent里设置Flag</li>
-</ol>
-
-
-<p>当两种方式都设置了时，以Intent里设置的Flag优先。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Android一般应用程序的启动过程]]></title>
-    <link href="http://javajavadog.github.io/blog/2015/01/05/android%5B%3F%5D-ban-ying-yong-cheng-xu-de-qi-dong-guo-cheng/"/>
-    <updated>2015-01-05T12:28:12+08:00</updated>
-    <id>http://javajavadog.github.io/blog/2015/01/05/android[?]-ban-ying-yong-cheng-xu-de-qi-dong-guo-cheng</id>
-    <content type="html"><![CDATA[<p>Android一般应用程序的启动过程</p>
-
-<p>任何应用程序都有一个启动的入口。例如机器语言的应用程序，入口即是和硬件约定好的数据摆放位置，汇编语言则一般是寄存器中指令指针所指的位置，C语言一般是main方法，Java则是static main方法。</p>
-
-<p>Android应用程序的启动入口，在开发者看来好像是Activity里面的onCreate()方法。</p>
-
-<p>本文想分析的是，在点击Launcher上面的icon后，onCreate()之前，到底发生了什么。C层的东西，如何创建进程之类的，暂时不分析(zygote这名字取得蛮有创意)，我们从Java代码开始。</p>
-
-<!--more-->
-
-
-<p>ActivityThread
-这个类是很重要的入口类，在这里我们也可以看到熟悉的public static void main(String[] args)方法。</p>
-
-<p>main执行后，执行了一个重要的方法prepareMainLooper()，该方法配合线程本地存储，给本线程创建了一个MessageQueue，并且让本线程成为了主线程，也是我们常说的UI线程。</p>
-
-<p>prepareMainLooper()之后，实例化了ActivityThread，实例化ActivityThread的时候，同时实例化了H类和ApplicationThread类，H类是一个Handler，ApplicationThread类是一个Binder。此时的H类所对应的Looper是MainLooper。</p>
-
-<p>实例化ActivityThread之后，执行了一个重要的方法activityThread.attach()。attach时把前面的ApplicationThread类作为Binder丢给了Runtime，接收ActivityManagerService的IPC消息，当IPC消息来的时候，实际上ApplicationThread并不会直接处理，而是通过前面的H类将消息丢到MainLooper的MessageQueue中，等待执行。</p>
-
-<p>接下来会执行到Looper.loop()方法，该方法会将MainLooper对应MessageQueue中的消息拿出来处理，并一直循环下去。</p>
-
-<p>ActivityManagerService发送启动Activity的指令，前面的ApplicationThread将其通过H丢到MessageQueue中，Looper执行它来启动Activity。</p>
-
-<p>接下来就到了H中的handleLaunchActivity，终于Activity要启动了。通过java的newInstance方式创建出了activity的实例（原来activity是这里new出来的）。启动Activity的时候，会检查是否有了Application，如果没有就创建并启动一个，就是那个我们常用的放全局变量的东西。</p>
-
-<p>activity有了之后，又执行了一个重要方法，activity.attach()，此方法创建了Window类并绑到了WindowManager，这个Window是一个PhoneWindow，PhoneWindow有一个继承于FrameLayout的DecorView，这个东西就是显示我们UI的容器了。创建DecorView的时候，会根据后面set的主题等创建出Title，Background等。</p>
-
-<p>然后是setTheme，performCreate，performStart……我们会实现对应的onCreate()，onStart()……你懂的。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Blog迁徙到github]]></title>
-    <link href="http://javajavadog.github.io/blog/2015/01/05/blogqian-xi-dao-github/"/>
-    <updated>2015-01-05T10:46:59+08:00</updated>
-    <id>http://javajavadog.github.io/blog/2015/01/05/blogqian-xi-dao-github</id>
-    <content type="html"><![CDATA[<p>Congratulations!</br></br>
-Blog乔迁到了github。</p>
+    <title type="html"><![CDATA[Hello]]></title>
+    <link href="http://javajavadog.github.io/blog/2015/03/22/hello/"/>
+    <updated>2015-03-22T00:56:45+08:00</updated>
+    <id>http://javajavadog.github.io/blog/2015/03/22/hello</id>
+    <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
