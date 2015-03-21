@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Xiang's Blog]]></title>
+  <title><![CDATA[imwmw.com]]></title>
   <link href="http://javajavadog.github.io/atom.xml" rel="self"/>
   <link href="http://javajavadog.github.io/"/>
-  <updated>2015-03-22T00:48:11+08:00</updated>
+  <updated>2015-03-22T00:55:38+08:00</updated>
   <id>http://javajavadog.github.io/</id>
   <author>
     <name><![CDATA[Xiang]]></name>
