@@ -10,13 +10,13 @@ Agile, quality, innovatory and be able to work under a challenging environment. 
 
 #### Main skills
 
-More than seven years Android developing experience
+* More than seven years Android developing experience
 
-Advanced Java language programming
+* Advanced Java language programming
 
-Advanced agile development experience
+* Advanced agile development experience
 
-Familiar with neccessary skill include C, UNIX, Shell, Git, HTML5, JavaScript, CSS, Objective C, Photoshop, Illustrator, etc.
+* Familiar with neccessary skill include C, UNIX, Shell, Git, HTML5, JavaScript, CSS, Objective C, Photoshop, Illustrator, etc.
 
 #### Work experience
 
