@@ -1,0 +1,41 @@
+### My CV
+
+Xiang Li is a Mobile application lead developer / UI designer.
+
+He brings 8 years of experience on programming application layer app on both Android/iOS platforms.
+
+#### Overview
+
+Agile, quality, innovatory and be able to work under a challenging environment. Love computer sciences. Have coordination skills, teamwork spirit. I have advanced mobile developing experience. Design Android applications since Android-SDK-0.6beta, design iOS applications since iOS4.
+
+#### Main skills
+
+More than seven years Android developing experience
+
+Advanced Java language programming
+
+Advanced agile development experience
+
+Familiar with neccessary skill include C, UNIX, Shell, Git, HTML5, JavaScript, CSS, Objective C, Photoshop, Illustrator, etc.
+
+#### Work experience
+
+##### Senior Software Engineer, TianTian, 2014/08 - 2014/12
+
+##### Senior Software Engineer, Symantec, 2011/05 - 2014/07
+
+I was participated in many Symantec key mobile security projects. Including Norton Mobile Security (both Android/iOS), Norton Identity Safe (Android), Norton Spot (Android), Norton Mobile Security Portal (Web). For Norton Mobile Security, I developed the backup feature for iOS, remote call feature, participated in Anti-Theft feature, improve UI, and write build script for different license layout. For Norton Identity safe, I built the application structure, encapsulated web view, developing search engine results rating system, adapting web analysis engine, password manager and user interface. For web portal, I was participated in new responsive web user interface, based on bootstrap, to improve the user experience on mobile device, and implemented the remote call portal side functions. For Norton spot, I was the main developer and project driver. I also contributed the idea about dynamic change screen lock to improve the security of Android device, applying for a patent. Because of the flexible developing skill between Android, iOS and Web, the fast response and innovative ideas on our security product, I was awarded “2013 outstanding employee of Symantec”.
+
+##### Software Engineer, Cybercom Group, 2010/03 - 2011/05
+
+I was participated in many Symantec key mobile security projects. Including Norton Mobile Security (both Android/iOS), Norton Identity Safe (Android), Norton Spot (Android), Norton Mobile Security Portal (Web). For Norton Mobile Security, I developed the backup feature for iOS, remote call feature, participated in Anti-Theft feature, improve UI, and write build script for different license layout. For Norton Identity safe, I built the application structure, encapsulated web view, developing search engine results rating system, adapting web analysis engine, password manager and user interface. For web portal, I was participated in new responsive web user interface, based on bootstrap, to improve the user experience on mobile device, and implemented the remote call portal side functions. For Norton spot, I was the main developer and project driver. I also contributed the idea about dynamic change screen lock to improve the security of Android device, applying for a patent. Because of the flexible developing skill between Android, iOS and Web, the fast response and innovative ideas on our security product, I was awarded “2013 outstanding employee of Symantec”.
+
+##### Software Engineer, Rose Datasystem, 2008/03 - 2010/03
+
+I was participated in many Symantec key mobile security projects. Including Norton Mobile Security (both Android/iOS), Norton Identity Safe (Android), Norton Spot (Android), Norton Mobile Security Portal (Web). For Norton Mobile Security, I developed the backup feature for iOS, remote call feature, participated in Anti-Theft feature, improve UI, and write build script for different license layout. For Norton Identity safe, I built the application structure, encapsulated web view, developing search engine results rating system, adapting web analysis engine, password manager and user interface. For web portal, I was participated in new responsive web user interface, based on bootstrap, to improve the user experience on mobile device, and implemented the remote call portal side functions. For Norton spot, I was the main developer and project driver. I also contributed the idea about dynamic change screen lock to improve the security of Android device, applying for a patent. Because of the flexible developing skill between Android, iOS and Web, the fast response and innovative ideas on our security product, I was awarded “2013 outstanding employee of Symantec”.
+
+#### Education
+
+Software engineering bachelor degree, Southwest Petroleum University 2004/09 - 2008/06
+
+
