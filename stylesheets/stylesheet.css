@@ -85,14 +85,8 @@ h4 {
   font-size: 21px;
 }
 
-<<<<<<< HEAD
-.inner {
-  width: 800px;
-  margin: 0 auto;
-=======
 h5 {
   font-size: 18px;
->>>>>>> d1272478cef06bc5004805889e70cb6cbf513a3a
 }
 
 h6 {
@@ -272,7 +266,7 @@ Full-Width Styles
 
 .inner {
   position: relative;
-  max-width: 800px;
+  max-width: 640px;
   padding: 20px 10px;
   margin: 0 auto;
 }
