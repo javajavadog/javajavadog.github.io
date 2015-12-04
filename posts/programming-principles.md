@@ -4,4 +4,21 @@
 
 这个列表灵感来源于[编程的艺术](http://www.artima.com/weblogs/viewpost.jsp?thread=331531)。我觉得这个清单非常不错，我在这个清单的基础上增加了一些细节，希望各位读者读后能有所收获。
 
+## 目录
+### 普通准则
+* [KISS (Keep it simple stupid)](#kiss)
+* YAGNI  
+* Do The Simple Thing That Could Possibly Work  
+* Keep Things DRY  
+* Code For The Maintainer
+* Avoid Premature Optimization
+
+
+### 模式内/类
+### 模式/类
+
+
+<div id="kiss"></div>
+
+## KISS
 
