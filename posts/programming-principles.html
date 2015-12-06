@@ -41,16 +41,11 @@
 
 <ul>
 <li><a href="#kiss">KISS (Keep it simple stupid)</a></li>
-<li><a href="#yagni">YAGNI</a></li>
-<li>Do The Simple Thing That Could Possibly Work  </li>
-<li>Keep Things DRY  </li>
-<li>Code For The Maintainer</li>
-<li>Avoid Premature Optimization</li>
+<li><a href="#yagni">YAGNI (You aren't gonna need it)</a></li>
+<li><a href="#dothesimple">Do The Simple Thing That Could Possibly Work</a>  </li>
+<li><a href="#keep-things-dry">Keep Things DRY</a>  </li>
+<li><a href="#solid">SOLID准则</a></li>
 </ul>
-
-<h3>模式内/类</h3>
-
-<h3>模式/类</h3>
 
 <div id="kiss"></div>
 
@@ -82,6 +77,51 @@
 <div id="dothesimple"></div>
 
 <h2>Do The Simple Thing That Could Possibly Work</h2>
+
+<p>理由：
+* 当我们专注在实际问题的领域内时，工作是最有效率的</p>
+
+<p>怎样做：
+* 做事情之前，先问自己：“这个东西最简单的实现方式是什么？”</p>
+
+<div id="keep-things-dry"></div>
+
+<h2>Keep things DRY</h2>
+
+<p>每一个细小的编程模块，在整个系统中都必须是唯一的，没有歧义的，并且是权威的。</p>
+
+<p>重要的功能模块在程序里面应该只有一处实现。如果类似的代码在许多地方都出现，一般来说需要考虑是否应该将它们抽象和合并起来。</p>
+
+<p>理由：
+* 重复代码可能导致维护的噩梦，降低系统的可重构性，并可能引发逻辑矛盾
+* 所有代码使用同样的编程模块，这样只修改这一处便可以达到全部相关代码逻辑都更新的效果
+* 可以保持所有逻辑相关代码的一致性</p>
+
+<p>怎样做：
+* 业务规则，表达式，if判断，数学公式，元数据，等等。只保留在一处
+* 分辨和找出所有系统里面共同的逻辑，将它们抽取出来
+* 应用“三处法则”，则当一个实现出现第三次时，就开始将它抽象出来</p>
+
+<div id="solid"></div>
+
+<h2>SOLID准则</h2>
+
+<p>S.O.L.I.D是面向对象设计和编程中几个重要编码原则的首字母缩写</p>
+
+<p>| SRP        | The Single Responsibility Principle           | 单一责任原则  |
+| OCP        | The Open Closed Principle                     | 单一责任原则  |
+| LSP        | The Liskov Substitution Principle             | 单一责任原则  |
+| DIP        | The Dependency Inversion Principle            | 单一责任原则  |
+| ISP        | The Interface Segrregation Principle          | 单一责任原则  |</p>
+
+<h3>单一责任原则</h3>
+
+<p>某个类应该只完成一个独立的事情，当一个类需要负责完成很多不同的逻辑时，考虑分拆这个类。</p>
+
+<p>例子：瑞士军刀
+Just because you can, doesn't mean you should.</p>
+
+<h3>开放封闭原则</h3>
 
 <p>adf <br>
 adf <br>
