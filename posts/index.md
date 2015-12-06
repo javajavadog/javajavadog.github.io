@@ -1,6 +1,6 @@
 ## Articles
 
-[Programming-principles](./posts/programming-principles.html)
+[Programming principles](./posts/programming-principles.html)
 
 ## My CV
 
