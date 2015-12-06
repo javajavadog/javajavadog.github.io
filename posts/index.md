@@ -1,4 +1,7 @@
 ### simon's CV
 
-Simon Li is a Mobile application lead developer / UI designer
+## Articles
+
+[Programming-principles](./posts/programming-principles.html)
+
 
