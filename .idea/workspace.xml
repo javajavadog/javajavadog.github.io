@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53861c2e-18fd-4ee2-a3ea-17c0ac553d16" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/programming-principles.md" afterPath="$PROJECT_DIR$/posts/programming-principles.md" />
     </list>
     <ignored path="javajavadog.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,8 +40,8 @@
       <file leaf-file-name="programming-principles.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/posts/programming-principles.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.6239219">
-              <caret line="115" column="10" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.5158137">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -513,8 +513,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/posts/programming-principles.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.6239219">
-          <caret line="115" column="10" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.5158137">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
