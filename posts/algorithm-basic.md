@@ -13,4 +13,8 @@
 * 2^N
 * N!
 
+![for1fn](../images/fn.png)
+![forlargefn](../images/fn.png)
+
+
 
