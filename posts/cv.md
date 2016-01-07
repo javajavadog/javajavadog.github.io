@@ -12,13 +12,17 @@ Agile, quality, innovatory and be able to work under a challenging environment. 
 
 * More than seven years Android developing experience
 
-* Advanced Java language programming
+* Advanced java language programming
 
 * Advanced agile development experience
+
+* Advanced mobile application GUI programming
 
 * Familiar with neccessary skill include C, UNIX, Shell, Git, HTML5, JavaScript, CSS, Objective C, Photoshop, Illustrator, etc.
 
 #### Work experience
+
+##### Senior Software Engineer, Maipu Communication, 2014/12 - present
 
 ##### Senior Software Engineer, TianTian, 2014/08 - 2014/12
 
