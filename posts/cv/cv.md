@@ -1,8 +1,8 @@
 ### My CV
 
-Xiang Li is a Mobile application lead developer / UI designer.
+Xiang Li is a Senior Software Engineer.
 
-He brings 8 years of experience on programming application layer app on both Android/iOS platforms.
+He brings 7 years of experience on programming application on both Android/iOS platforms.
 
 #### Overview
 
@@ -18,13 +18,15 @@ Agile, quality, innovatory and be able to work under a challenging environment. 
 
 * Advanced mobile application GUI programming
 
-* Familiar with neccessary skill include C, UNIX, Shell, Git, HTML5, JavaScript, CSS, Objective C, Photoshop, Illustrator, etc.
+* Familiar with neccessary skill include C, UNIX, Shell, Git, HTML5, JavaScript, CSS, Objective C, Gradle, CocoaPods, Photoshop, Illustrator, etc.
 
 #### Work experience
 
 ##### Senior Software Engineer, Maipu Communication, 2014/12 - present
 
 ##### Senior Software Engineer, TianTian, 2014/08 - 2014/12
+
+Tiantian is a venture company, I was in charge of enhance the mobile application UI architectural, 
 
 ##### Senior Software Engineer, Symantec, 2011/05 - 2014/07
 
