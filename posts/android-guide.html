@@ -27,286 +27,330 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
 
-<h1>1. Project guidelines</h1>
-
-<h2>1.1 Project structure</h2>
-
+<h1 id="project-guidelines">1. Project guidelines</h1>
+<h2 id="project-structure">1.1 Project structure</h2>
 <p>New projects should follow the Android Gradle project structure that is defined on the <a href="http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Project-Structure">Android Gradle plugin user guide</a>. The <a href="https://github.com/ribot/android-boilerplate">ribot Boilerplate</a> project is a good reference to start from.</p>
-
-<h2>1.2 File naming</h2>
-
-<h3>1.2.1 Class files</h3>
-
+<h2 id="file-naming">1.2 File naming</h2>
+<h3 id="class-files">1.2.1 Class files</h3>
 <p>Class names are written in <a href="http://en.wikipedia.org/wiki/CamelCase">UpperCamelCase</a>.</p>
-
 <p>For classes that extend an Android component, the name of the class should end with the name of the component; for example: <code>SignInActivity</code>, <code>SignInFragment</code>, <code>ImageUploaderService</code>, <code>ChangePasswordDialog</code>.</p>
-
-<h3>1.2.2 Resources files</h3>
-
+<h3 id="resources-files">1.2.2 Resources files</h3>
 <p>Resources file names are written in <strong>lowercase_underscore</strong>.</p>
-
-<h4>1.2.2.1 Drawable files</h4>
-
+<h4 id="drawable-files">1.2.2.1 Drawable files</h4>
 <p>Naming conventions for drawables:</p>
-
-<p>| Asset Type   | Prefix            |        Example               |
-|--------------| ------------------|-----------------------------|
-| Action bar   | <code>ab_</code>             | <code>ab_stacked.9.png</code>          |
-| Button       | <code>btn_</code>             | <code>btn_send_pressed.9.png</code>    |
-| Dialog       | <code>dialog_</code>         | <code>dialog_top.9.png</code>          |
-| Divider      | <code>divider_</code>        | <code>divider_horizontal.9.png</code>  |
-| Icon         | <code>ic_</code>              | <code>ic_star.png</code>               |
-| Menu         | <code>menu_</code>           | <code>menu_submenu_bg.9.png</code>     |
-| Notification | <code>notification_</code>    | <code>notification_bg.9.png</code>     |
-| Tabs         | <code>tab_</code>            | <code>tab_pressed.9.png</code>         |</p>
-
+<table>
+<thead>
+<tr class="header">
+<th align="left">Asset Type</th>
+<th align="left">Prefix</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Action bar</td>
+<td align="left"><code>ab_</code></td>
+<td align="left"><code>ab_stacked.9.png</code></td>
+</tr>
+<tr class="even">
+<td align="left">Button</td>
+<td align="left"><code>btn_</code></td>
+<td align="left"><code>btn_send_pressed.9.png</code></td>
+</tr>
+<tr class="odd">
+<td align="left">Dialog</td>
+<td align="left"><code>dialog_</code></td>
+<td align="left"><code>dialog_top.9.png</code></td>
+</tr>
+<tr class="even">
+<td align="left">Divider</td>
+<td align="left"><code>divider_</code></td>
+<td align="left"><code>divider_horizontal.9.png</code></td>
+</tr>
+<tr class="odd">
+<td align="left">Icon</td>
+<td align="left"><code>ic_</code></td>
+<td align="left"><code>ic_star.png</code></td>
+</tr>
+<tr class="even">
+<td align="left">Menu</td>
+<td align="left"><code>menu_</code></td>
+<td align="left"><code>menu_submenu_bg.9.png</code></td>
+</tr>
+<tr class="odd">
+<td align="left">Notification</td>
+<td align="left"><code>notification_</code></td>
+<td align="left"><code>notification_bg.9.png</code></td>
+</tr>
+<tr class="even">
+<td align="left">Tabs</td>
+<td align="left"><code>tab_</code></td>
+<td align="left"><code>tab_pressed.9.png</code></td>
+</tr>
+</tbody>
+</table>
 <p>Naming conventions for icons (taken from <a href="http://developer.android.com/design/style/iconography.html">Android iconography guidelines</a>):</p>
-
-<p>| Asset Type                      | Prefix             | Example                      |
-| --------------------------------| ----------------   | ---------------------------- |
-| Icons                           | <code>ic_</code>              | <code>ic_star.png</code>                |
-| Launcher icons                  | <code>ic_launcher</code>      | <code>ic_launcher_calendar.png</code>   |
-| Menu icons and Action Bar icons | <code>ic_menu</code>          | <code>ic_menu_archive.png</code>        |
-| Status bar icons                | <code>ic_stat_notify</code>   | <code>ic_stat_notify_msg.png</code>     |
-| Tab icons                       | <code>ic_tab</code>           | <code>ic_tab_recent.png</code>          |
-| Dialog icons                    | <code>ic_dialog</code>        | <code>ic_dialog_info.png</code>         |</p>
-
+<table>
+<thead>
+<tr class="header">
+<th align="left">Asset Type</th>
+<th align="left">Prefix</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Icons</td>
+<td align="left"><code>ic_</code></td>
+<td align="left"><code>ic_star.png</code></td>
+</tr>
+<tr class="even">
+<td align="left">Launcher icons</td>
+<td align="left"><code>ic_launcher</code></td>
+<td align="left"><code>ic_launcher_calendar.png</code></td>
+</tr>
+<tr class="odd">
+<td align="left">Menu icons and Action Bar icons</td>
+<td align="left"><code>ic_menu</code></td>
+<td align="left"><code>ic_menu_archive.png</code></td>
+</tr>
+<tr class="even">
+<td align="left">Status bar icons</td>
+<td align="left"><code>ic_stat_notify</code></td>
+<td align="left"><code>ic_stat_notify_msg.png</code></td>
+</tr>
+<tr class="odd">
+<td align="left">Tab icons</td>
+<td align="left"><code>ic_tab</code></td>
+<td align="left"><code>ic_tab_recent.png</code></td>
+</tr>
+<tr class="even">
+<td align="left">Dialog icons</td>
+<td align="left"><code>ic_dialog</code></td>
+<td align="left"><code>ic_dialog_info.png</code></td>
+</tr>
+</tbody>
+</table>
 <p>Naming conventions for selector states:</p>
-
-<p>| State        | Suffix          | Example                     |
-|--------------|-----------------|-----------------------------|
-| Normal       | <code>_normal</code>       | <code>btn_order_normal.9.png</code>    |
-| Pressed      | <code>_pressed</code>      | <code>btn_order_pressed.9.png</code>   |
-| Focused      | <code>_focused</code>      | <code>btn_order_focused.9.png</code>   |
-| Disabled     | <code>_disabled</code>     | <code>btn_order_disabled.9.png</code>  |
-| Selected     | <code>_selected</code>     | <code>btn_order_selected.9.png</code>  |</p>
-
-<h4>1.2.2.2 Layout files</h4>
-
+<table>
+<thead>
+<tr class="header">
+<th align="left">State</th>
+<th align="left">Suffix</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Normal</td>
+<td align="left"><code>_normal</code></td>
+<td align="left"><code>btn_order_normal.9.png</code></td>
+</tr>
+<tr class="even">
+<td align="left">Pressed</td>
+<td align="left"><code>_pressed</code></td>
+<td align="left"><code>btn_order_pressed.9.png</code></td>
+</tr>
+<tr class="odd">
+<td align="left">Focused</td>
+<td align="left"><code>_focused</code></td>
+<td align="left"><code>btn_order_focused.9.png</code></td>
+</tr>
+<tr class="even">
+<td align="left">Disabled</td>
+<td align="left"><code>_disabled</code></td>
+<td align="left"><code>btn_order_disabled.9.png</code></td>
+</tr>
+<tr class="odd">
+<td align="left">Selected</td>
+<td align="left"><code>_selected</code></td>
+<td align="left"><code>btn_order_selected.9.png</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="layout-files">1.2.2.2 Layout files</h4>
 <p>Layout files should match the name of the Android components that they are intended for but moving the top level component name to the beginning. For example, if we are creating a layout for the <code>SignInActivity</code>, the name of the layout file should be <code>activity_sign_in.xml</code>.</p>
-
-<p>| Component        | Class Name             | Layout Name                   |
-| ---------------- | ---------------------- | ----------------------------- |
-| Activity         | <code>UserProfileActivity</code>  | <code>activity_user_profile.xml</code>   |
-| Fragment         | <code>SignUpFragment</code>       | <code>fragment_sign_up.xml</code>        |
-| Dialog           | <code>ChangePasswordDialog</code> | <code>dialog_change_password.xml</code>  |
-| AdapterView item | ---                    | <code>item_person.xml</code>             |
-| Partial layout   | ---                    | <code>partial_stats_bar.xml</code>       |</p>
-
+<table>
+<thead>
+<tr class="header">
+<th align="left">Component</th>
+<th align="left">Class Name</th>
+<th align="left">Layout Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Activity</td>
+<td align="left"><code>UserProfileActivity</code></td>
+<td align="left"><code>activity_user_profile.xml</code></td>
+</tr>
+<tr class="even">
+<td align="left">Fragment</td>
+<td align="left"><code>SignUpFragment</code></td>
+<td align="left"><code>fragment_sign_up.xml</code></td>
+</tr>
+<tr class="odd">
+<td align="left">Dialog</td>
+<td align="left"><code>ChangePasswordDialog</code></td>
+<td align="left"><code>dialog_change_password.xml</code></td>
+</tr>
+<tr class="even">
+<td align="left">AdapterView item</td>
+<td align="left">---</td>
+<td align="left"><code>item_person.xml</code></td>
+</tr>
+<tr class="odd">
+<td align="left">Partial layout</td>
+<td align="left">---</td>
+<td align="left"><code>partial_stats_bar.xml</code></td>
+</tr>
+</tbody>
+</table>
 <p>A slightly different case is when we are creating a layout that is going to be inflated by an <code>Adapter</code>, e.g to populate a <code>ListView</code>. In this case, the name of the layout should start with <code>item_</code>.</p>
-
 <p>Note that there are cases where these rules will not be possible to apply. For example, when creating layout files that are intended to be part of other layouts. In this case you should use the prefix <code>partial_</code>.</p>
-
-<h4>1.2.2.3 Menu files</h4>
-
+<h4 id="menu-files">1.2.2.3 Menu files</h4>
 <p>Similar to layout files, menu files should match the name of the component. For example, if we are defining a menu file that is going to be used in the <code>UserActivity</code>, then the name of the file should be <code>activity_user.xml</code></p>
-
 <p>A good practice is to not include the word <code>menu</code> as part of the name because these files are already located in the <code>menu</code> directory.</p>
-
-<h4>1.2.2.4 Values files</h4>
-
+<h4 id="values-files">1.2.2.4 Values files</h4>
 <p>Resource files in the values folder should be <strong>plural</strong>, e.g. <code>strings.xml</code>, <code>styles.xml</code>, <code>colors.xml</code>, <code>dimens.xml</code>, <code>attrs.xml</code></p>
-
-<h1>2 Code guidelines</h1>
-
-<h2>2.1 Java language rules</h2>
-
-<h3>2.1.1 Don't ignore exceptions</h3>
-
+<h1 id="code-guidelines">2 Code guidelines</h1>
+<h2 id="java-language-rules">2.1 Java language rules</h2>
+<h3 id="dont-ignore-exceptions">2.1.1 Don't ignore exceptions</h3>
 <p>You must never do the following:</p>
-
-<p><code>java
-void setServerPort(String value) {
-    try {
-        serverPort = Integer.parseInt(value);
-    } catch (NumberFormatException e) { }
-}
-</code></p>
-
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="dt">void</span> <span class="fu">setServerPort</span>(String value) {
+    <span class="kw">try</span> {
+        serverPort = Integer.<span class="fu">parseInt</span>(value);
+    } <span class="kw">catch</span> (NumberFormatException e) { }
+}</code></pre></div>
 <p><em>While you may think that your code will never encounter this error condition or that it is not important to handle it, ignoring exceptions like above creates mines in your code for someone else to trip over some day. You must handle every Exception in your code in some principled way. The specific handling varies depending on the case.</em> - (<a href="https://source.android.com/source/code-style.html">Android code style guidelines</a>)</p>
-
 <p>See alternatives <a href="https://source.android.com/source/code-style.html#dont-ignore-exceptions">here</a>.</p>
-
-<h3>2.1.2 Don't catch generic exception</h3>
-
+<h3 id="dont-catch-generic-exception">2.1.2 Don't catch generic exception</h3>
 <p>You should not do this:</p>
-
-<p><code>java
-try {
-    someComplicatedIOFunction();        // may throw IOException
-    someComplicatedParsingFunction();   // may throw ParsingException
-    someComplicatedSecurityFunction();  // may throw SecurityException
-    // phew, made it all the way
-} catch (Exception e) {                 // I'll just catch all exceptions
-    handleError();                      // with one generic handler!
-}
-</code></p>
-
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">try</span> {
+    <span class="fu">someComplicatedIOFunction</span>();        <span class="co">// may throw IOException</span>
+    <span class="fu">someComplicatedParsingFunction</span>();   <span class="co">// may throw ParsingException</span>
+    <span class="fu">someComplicatedSecurityFunction</span>();  <span class="co">// may throw SecurityException</span>
+    <span class="co">// phew, made it all the way</span>
+} <span class="kw">catch</span> (Exception e) {                 <span class="co">// I&#39;ll just catch all exceptions</span>
+    <span class="fu">handleError</span>();                      <span class="co">// with one generic handler!</span>
+}</code></pre></div>
 <p>See the reason why and some alternatives <a href="https://source.android.com/source/code-style.html#dont-catch-generic-exception">here</a></p>
-
-<h3>2.1.3 Don't use finalizers</h3>
-
+<h3 id="dont-use-finalizers">2.1.3 Don't use finalizers</h3>
 <p><em>We don't use finalizers. There are no guarantees as to when a finalizer will be called, or even that it will be called at all. In most cases, you can do what you need from a finalizer with good exception handling. If you absolutely need it, define a <code>close()</code> method (or the like) and document exactly when that method needs to be called. See <code>InputStream</code> for an example. In this case it is appropriate but not required to print a short log message from the finalizer, as long as it is not expected to flood the logs.</em> - (<a href="https://source.android.com/source/code-style.html#dont-use-finalizers">Android code style guidelines</a>)</p>
-
-<h3>2.1.4 Fully qualify imports</h3>
-
+<h3 id="fully-qualify-imports">2.1.4 Fully qualify imports</h3>
 <p>This is bad: <code>import foo.*;</code></p>
-
 <p>This is good: <code>import foo.Bar;</code></p>
-
 <p>See more info <a href="https://source.android.com/source/code-style.html#fully-qualify-imports">here</a></p>
-
-<h2>2.2 Java style rules</h2>
-
-<h3>2.2.1 Fields definition and naming</h3>
-
+<h2 id="java-style-rules">2.2 Java style rules</h2>
+<h3 id="fields-definition-and-naming">2.2.1 Fields definition and naming</h3>
 <p>Fields should be defined at the <strong>top of the file</strong> and they should follow the naming rules listed below.</p>
-
 <ul>
 <li>Private, non-static field names start with <strong>m</strong>.</li>
 <li>Private, static field names start with <strong>s</strong>.</li>
 <li>Other fields start with a lower case letter.</li>
-<li>Static final fields (constants) are ALL<em>CAPS</em>WITH_UNDERSCORES.</li>
+<li>Static final fields (constants) are ALL_CAPS_WITH_UNDERSCORES.</li>
 </ul>
-
 <p>Example:</p>
-
-<p><code>java
-public class MyClass {
-    public static final int SOME_CONSTANT = 42;
-    public int publicField;
-    private static MyClass sSingleton;
-    int mPackagePrivate;
-    private int mPrivate;
-    protected int mProtected;
-}
-</code></p>
-
-<h3>2.2.3 Treat acronyms as words</h3>
-
-<p>| Good           | Bad            |
-| -------------- | -------------- |
-| <code>XmlHttpRequest</code> | <code>XMLHTTPRequest</code> |
-| <code>getCustomerId</code>  | <code>getCustomerID</code>  |
-| <code>String url</code>     | <code>String URL</code>     |
-| <code>long id</code>        | <code>long ID</code>        |</p>
-
-<h3>2.2.4 Use spaces for indentation</h3>
-
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> MyClass {
+    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">final</span> <span class="dt">int</span> SOME_CONSTANT = <span class="dv">42</span>;
+    <span class="kw">public</span> <span class="dt">int</span> publicField;
+    <span class="kw">private</span> <span class="dt">static</span> MyClass sSingleton;
+    <span class="dt">int</span> mPackagePrivate;
+    <span class="kw">private</span> <span class="dt">int</span> mPrivate;
+    <span class="kw">protected</span> <span class="dt">int</span> mProtected;
+}</code></pre></div>
+<h3 id="treat-acronyms-as-words">2.2.3 Treat acronyms as words</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Good</th>
+<th align="left">Bad</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>XmlHttpRequest</code></td>
+<td align="left"><code>XMLHTTPRequest</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>getCustomerId</code></td>
+<td align="left"><code>getCustomerID</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>String url</code></td>
+<td align="left"><code>String URL</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>long id</code></td>
+<td align="left"><code>long ID</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="use-spaces-for-indentation">2.2.4 Use spaces for indentation</h3>
 <p>Use <strong>4 space</strong> indents for blocks:</p>
-
-<p><code>java
-if (x == 1) {
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">if</span> (x == <span class="dv">1</span>) {
     x++;
-}
-</code></p>
-
+}</code></pre></div>
 <p>Use <strong>8 space</strong> indents for line wraps:</p>
-
-<p><code>java
-Instrument i =
-        someLongExpression(that, wouldNotFit, on, one, line);
-</code></p>
-
-<h3>2.2.5 Use standard brace style</h3>
-
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java">Instrument i =
+        <span class="fu">someLongExpression</span>(that, wouldNotFit, on, one, line);</code></pre></div>
+<h3 id="use-standard-brace-style">2.2.5 Use standard brace style</h3>
 <p>Braces go on the same line as the code before them.</p>
-
-<p><code>java
-class MyClass {
-    int func() {
-        if (something) {
-            // ...
-        } else if (somethingElse) {
-            // ...
-        } else {
-            // ...
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">class</span> MyClass {
+    <span class="dt">int</span> <span class="fu">func</span>() {
+        <span class="kw">if</span> (something) {
+            <span class="co">// ...</span>
+        } <span class="kw">else</span> <span class="kw">if</span> (somethingElse) {
+            <span class="co">// ...</span>
+        } <span class="kw">else</span> {
+            <span class="co">// ...</span>
         }
     }
-}
-</code></p>
-
+}</code></pre></div>
 <p>Braces around the statements are required unless the condition and the body fit on one line.</p>
-
 <p>If the condition and the body fit on one line and that line is shorter than the max line length, then braces are not required, e.g.</p>
-
-<p><code>java
-if (condition) body();
-</code></p>
-
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">if</span> (condition) <span class="fu">body</span>();</code></pre></div>
 <p>This is <strong>bad</strong>:</p>
-
-<p><code>java
-if (condition)
-    body();  // bad!
-</code></p>
-
-<h3>2.2.6 Annotations</h3>
-
-<h4>2.2.6.1 Annotations practices</h4>
-
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">if</span> (condition)
+    <span class="fu">body</span>();  <span class="co">// bad!</span></code></pre></div>
+<h3 id="annotations">2.2.6 Annotations</h3>
+<h4 id="annotations-practices">2.2.6.1 Annotations practices</h4>
 <p>According to the Android code style guide, the standard practices for some of the predefined annotations in Java are:</p>
-
 <ul>
-<li><p><code>@Override</code>: The @Override annotation <strong>must be used</strong> whenever a method overrides the declaration or implementation from a super-class. For example, if you use the @inheritdocs Javadoc tag, and derive from a class (not an interface), you must also annotate that the method @Overrides the parent class's method.</p></li>
-<li><p><code>@SuppressWarnings</code>: The @SuppressWarnings annotation should only be used under circumstances where it is impossible to eliminate a warning. If a warning passes this "impossible to eliminate" test, the @SuppressWarnings annotation must be used, so as to ensure that all warnings reflect actual problems in the code.</p></li>
+<li><p><code>@Override</code>: The <span class="citation">@Override</span> annotation <strong>must be used</strong> whenever a method overrides the declaration or implementation from a super-class. For example, if you use the <span class="citation">@inheritdocs</span> Javadoc tag, and derive from a class (not an interface), you must also annotate that the method <span class="citation">@Overrides</span> the parent class's method.</p></li>
+<li><p><code>@SuppressWarnings</code>: The <span class="citation">@SuppressWarnings</span> annotation should only be used under circumstances where it is impossible to eliminate a warning. If a warning passes this &quot;impossible to eliminate&quot; test, the <span class="citation">@SuppressWarnings</span> annotation must be used, so as to ensure that all warnings reflect actual problems in the code.</p></li>
 </ul>
-
 <p>More information about annotation guidelines can be found <a href="http://source.android.com/source/code-style.html#use-standard-java-annotations">here</a>.</p>
-
-<h4>2.2.6.2 Annotations style</h4>
-
+<h4 id="annotations-style">2.2.6.2 Annotations style</h4>
 <p><strong>Classes, Methods and Constructors</strong></p>
-
 <p>When annotations are applied to a class, method, or constructor, they are listed after the documentation block and should appear as <strong>one annotation per line</strong> .</p>
-
-<p><code>java
-/* This is the documentation block about the class */
-@AnnotationA
-@AnnotationB
-public class MyAnnotatedClass { }
-</code></p>
-
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="co">/* This is the documentation block about the class */</span>
+<span class="fu">@AnnotationA</span>
+<span class="fu">@AnnotationB</span>
+<span class="kw">public</span> <span class="kw">class</span> MyAnnotatedClass { }</code></pre></div>
 <p><strong>Fields</strong></p>
-
 <p>Annotations applying to fields should be listed <strong>on the same line</strong>, unless the line reaches the maximum line length.</p>
-
-<p><code>java
-@Nullable @Mock DataManager mDataManager;
-</code></p>
-
-<h3>2.2.7 Limit variable scope</h3>
-
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="fu">@Nullable</span> <span class="fu">@Mock</span> DataManager mDataManager;</code></pre></div>
+<h3 id="limit-variable-scope">2.2.7 Limit variable scope</h3>
 <p><em>The scope of local variables should be kept to a minimum (Effective Java Item 29). By doing so, you increase the readability and maintainability of your code and reduce the likelihood of error. Each variable should be declared in the innermost block that encloses all uses of the variable.</em></p>
-
 <p><em>Local variables should be declared at the point they are first used. Nearly every local variable declaration should contain an initializer. If you don't yet have enough information to initialize a variable sensibly, you should postpone the declaration until you do.</em> - (<a href="https://source.android.com/source/code-style.html#limit-variable-scope">Android code style guidelines</a>)</p>
-
-<h3>2.2.8 Order import statements</h3>
-
+<h3 id="order-import-statements">2.2.8 Order import statements</h3>
 <p>If you are using an IDE such as Android Studio, you don't have to worry about this because your IDE is already obeying these rules. If not, have a look below.</p>
-
 <p>The ordering of import statements is:</p>
-
-<ol>
+<ol style="list-style-type: decimal">
 <li>Android imports</li>
 <li>Imports from third parties (com, junit, net, org)</li>
 <li>java and javax</li>
 <li>Same project imports</li>
 </ol>
-
 <p>To exactly match the IDE settings, the imports should be:</p>
-
 <ul>
 <li>Alphabetically ordered within each grouping, with capital letters before lower case letters (e.g. Z before a).</li>
 <li>There should be a blank line between each major grouping (android, com, junit, net, org, java, javax).</li>
 </ul>
-
 <p>More info <a href="https://source.android.com/source/code-style.html#limit-variable-scope">here</a></p>
-
-<h3>2.2.9 Logging guidelines</h3>
-
+<h3 id="logging-guidelines">2.2.9 Logging guidelines</h3>
 <p>Use the logging methods provided by the <code>Log</code> class to print out error messages or other information that may be useful for developers to identify issues:</p>
-
 <ul>
 <li><code>Log.v(String tag, String msg)</code> (verbose)</li>
 <li><code>Log.d(String tag, String msg)</code> (debug)</li>
@@ -314,34 +358,20 @@ public class MyAnnotatedClass { }
 <li><code>Log.w(String tag, String msg)</code> (warning)</li>
 <li><code>Log.e(String tag, String msg)</code> (error)</li>
 </ul>
-
 <p>As a general rule, we use the class name as tag and we define it as a <code>static final</code> field at the top of the file. For example:</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> MyClass {
+    <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> String TAG = <span class="st">&quot;MyClass&quot;</span>;
 
-<p>```java
-public class MyClass {
-    private static final String TAG = "MyClass";</p>
-
-<pre><code>public myMethod() {
-    Log.e(TAG, "My error message");
-}
-</code></pre>
-
-<p>}
-```</p>
-
+    <span class="kw">public</span> <span class="fu">myMethod</span>() {
+        Log.<span class="fu">e</span>(TAG, <span class="st">&quot;My error message&quot;</span>);
+    }
+}</code></pre></div>
 <p>VERBOSE and DEBUG logs <strong>must</strong> be disabled on release builds. It is also recommended to disable INFORMATION, WARNING and ERROR logs but you may want to keep them enabled if you think they may be useful to identify issues on release builds. If you decide to leave them enabled, you have to make sure that they are not leaking private information such as email addresses, user ids, etc.</p>
-
 <p>To only show logs on debug builds:</p>
-
-<p><code>java
-if (BuildConfig.DEBUG) Log.d(TAG, "The value of x is " + x);
-</code></p>
-
-<h3>2.2.10 Class member ordering</h3>
-
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">if</span> (BuildConfig.<span class="fu">DEBUG</span>) Log.<span class="fu">d</span>(TAG, <span class="st">&quot;The value of x is &quot;</span> + x);</code></pre></div>
+<h3 id="class-member-ordering">2.2.10 Class member ordering</h3>
 <p>There is no single correct solution for this but using a <strong>logical</strong> and <strong>consistent</strong> order will improve code learnability and readability. It is recommendable to use the following order:</p>
-
-<ol>
+<ol style="list-style-type: decimal">
 <li>Constants</li>
 <li>Fields</li>
 <li>Constructors</li>
@@ -350,359 +380,295 @@ if (BuildConfig.DEBUG) Log.d(TAG, "The value of x is " + x);
 <li>Private methods</li>
 <li>Inner classes or interfaces</li>
 </ol>
-
 <p>Example:</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> MainActivity <span class="kw">extends</span> Activity {
 
-<p>```java
-public class MainActivity extends Activity {</p>
+    <span class="kw">private</span> String mTitle;
+    <span class="kw">private</span> TextView mTextViewTitle;
 
-<pre><code>private String mTitle;
-private TextView mTextViewTitle;
+    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">setTitle</span>(String title) {
+        mTitle = title;
+    }
 
-public void setTitle(String title) {
-    mTitle = title;
-}
+    <span class="fu">@Override</span>
+    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">onCreate</span>() {
+        ...
+    }
 
-@Override
-public void onCreate() {
-    ...
-}
+    <span class="kw">private</span> <span class="dt">void</span> <span class="fu">setUpView</span>() {
+        ...
+    }
 
-private void setUpView() {
-    ...
-}
+    <span class="dt">static</span> <span class="kw">class</span> AnInnerClass {
 
-static class AnInnerClass {
+    }
 
-}
-</code></pre>
-
-<p>}
-```</p>
-
+}</code></pre></div>
 <p>If your class is extending an <strong>Android component</strong> such as an Activity or a Fragment, it is a good practice to order the override methods so that they <strong>match the component's lifecycle</strong>. For example, if you have an Activity that implements <code>onCreate()</code>, <code>onDestroy()</code>, <code>onPause()</code> and <code>onResume()</code>, then the correct order is:</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="kw">class</span> MainActivity <span class="kw">extends</span> Activity {
 
-<p>```java
-public class MainActivity extends Activity {</p>
+    <span class="co">//Order matches Activity lifecycle</span>
+    <span class="fu">@Override</span>
+    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">onCreate</span>() {}
 
-<pre><code>//Order matches Activity lifecycle
-@Override
-public void onCreate() {}
+    <span class="fu">@Override</span>
+    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">onResume</span>() {}
 
-@Override
-public void onResume() {}
+    <span class="fu">@Override</span>
+    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">onPause</span>() {}
 
-@Override
-public void onPause() {}
+    <span class="fu">@Override</span>
+    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">onDestroy</span>() {}
 
-@Override
-public void onDestroy() {}
-</code></pre>
-
-<p>}
-```</p>
-
-<h3>2.2.11 Parameter ordering in methods</h3>
-
+}</code></pre></div>
+<h3 id="parameter-ordering-in-methods">2.2.11 Parameter ordering in methods</h3>
 <p>When programming for Android, it is quite common to define methods that take a <code>Context</code>. If you are writing a method like this, then the <strong>Context</strong> must be the <strong>first</strong> parameter.</p>
-
 <p>The opposite case are <strong>callback</strong> interfaces that should always be the <strong>last</strong> parameter.</p>
-
 <p>Examples:</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="co">// Context always goes first</span>
+<span class="kw">public</span> User <span class="fu">loadUser</span>(Context context, <span class="dt">int</span> userId);
 
-<p>```java
-// Context always goes first
-public User loadUser(Context context, int userId);</p>
-
-<p>// Callbacks always go last
-public void loadUserAsync(Context context, int userId, UserCallback callback);
-```</p>
-
-<h3>2.2.13 String constants, naming, and values</h3>
-
+<span class="co">// Callbacks always go last</span>
+<span class="kw">public</span> <span class="dt">void</span> <span class="fu">loadUserAsync</span>(Context context, <span class="dt">int</span> userId, UserCallback callback);</code></pre></div>
+<h3 id="string-constants-naming-and-values">2.2.13 String constants, naming, and values</h3>
 <p>Many elements of the Android SDK such as <code>SharedPreferences</code>, <code>Bundle</code>, or <code>Intent</code> use a key-value pair approach so it's very likely that even for a small app you end up having to write a lot of String constants.</p>
-
 <p>When using one of these components, you <strong>must</strong> define the keys as a <code>static final</code> fields and they should be prefixed as indicated below.</p>
-
-<p>| Element            | Field Name Prefix |
-| -----------------  | ----------------- |
-| SharedPreferences  | <code>PREF_</code>             |
-| Bundle             | <code>BUNDLE_</code>           |
-| Fragment Arguments | <code>ARGUMENT_</code>         |
-| Intent Extra       | <code>EXTRA_</code>            |
-| Intent Action      | <code>ACTION_</code>           |</p>
-
+<table>
+<thead>
+<tr class="header">
+<th align="left">Element</th>
+<th align="left">Field Name Prefix</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">SharedPreferences</td>
+<td align="left"><code>PREF_</code></td>
+</tr>
+<tr class="even">
+<td align="left">Bundle</td>
+<td align="left"><code>BUNDLE_</code></td>
+</tr>
+<tr class="odd">
+<td align="left">Fragment Arguments</td>
+<td align="left"><code>ARGUMENT_</code></td>
+</tr>
+<tr class="even">
+<td align="left">Intent Extra</td>
+<td align="left"><code>EXTRA_</code></td>
+</tr>
+<tr class="odd">
+<td align="left">Intent Action</td>
+<td align="left"><code>ACTION_</code></td>
+</tr>
+</tbody>
+</table>
 <p>Note that the arguments of a Fragment - <code>Fragment.getArguments()</code> - are also a Bundle. However, because this is a quite common use of Bundles, we define a different prefix for them.</p>
-
 <p>Example:</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="co">// Note the value of the field is the same as the name to avoid duplication issues</span>
+<span class="dt">static</span> <span class="dt">final</span> String PREF_EMAIL = <span class="st">&quot;PREF_EMAIL&quot;</span>;
+<span class="dt">static</span> <span class="dt">final</span> String BUNDLE_AGE = <span class="st">&quot;BUNDLE_AGE&quot;</span>;
+<span class="dt">static</span> <span class="dt">final</span> String ARGUMENT_USER_ID = <span class="st">&quot;ARGUMENT_USER_ID&quot;</span>;
 
-<p>```java
-// Note the value of the field is the same as the name to avoid duplication issues
-static final String PREF<em>EMAIL = "PREF</em>EMAIL";
-static final String BUNDLE<em>AGE = "BUNDLE</em>AGE";
-static final String ARGUMENT<em>USER</em>ID = "ARGUMENT<em>USER</em>ID";</p>
-
-<p>// Intent-related items use full package name as value
-static final String EXTRA<em>SURNAME = "com.myapp.extras.EXTRA</em>SURNAME";
-static final String ACTION<em>OPEN</em>USER = "com.myapp.action.ACTION<em>OPEN</em>USER";
-```</p>
-
-<h3>2.2.14 Arguments in Fragments and Activities</h3>
-
+<span class="co">// Intent-related items use full package name as value</span>
+<span class="dt">static</span> <span class="dt">final</span> String EXTRA_SURNAME = <span class="st">&quot;com.myapp.extras.EXTRA_SURNAME&quot;</span>;
+<span class="dt">static</span> <span class="dt">final</span> String ACTION_OPEN_USER = <span class="st">&quot;com.myapp.action.ACTION_OPEN_USER&quot;</span>;</code></pre></div>
+<h3 id="arguments-in-fragments-and-activities">2.2.14 Arguments in Fragments and Activities</h3>
 <p>When data is passed into an <code>Activity</code>or <code>Fragment</code> via an <code>Intent</code> or a <code>Bundle</code>, the keys for the different values <strong>must</strong> follow the rules described in the section above.</p>
-
 <p>When an <code>Activity</code> or <code>Fragment</code> expects arguments, it should provide a <code>public static</code> method that facilitates the creation of the relevant <code>Intent</code> or <code>Fragment</code>.</p>
-
 <p>In the case of Activities the method is usually called <code>getStartIntent()</code>:</p>
-
-<p><code>java
-public static Intent getStartIntent(Context context, User user) {
-    Intent intent = new Intent(context, ThisActivity.class);
-    intent.putParcelableExtra(EXTRA_USER, user);
-    return intent;
-}
-</code></p>
-
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="dt">static</span> Intent <span class="fu">getStartIntent</span>(Context context, User user) {
+    Intent intent = <span class="kw">new</span> <span class="fu">Intent</span>(context, ThisActivity.<span class="fu">class</span>);
+    intent.<span class="fu">putParcelableExtra</span>(EXTRA_USER, user);
+    <span class="kw">return</span> intent;
+}</code></pre></div>
 <p>For Fragments it is named <code>newInstance()</code> and handles the creation of the Fragment with the right arguments:</p>
-
-<p><code>java
-public static UserFragment newInstance(User user) {
-    UserFragment fragment = new UserFragment;
-    Bundle args = new Bundle();
-    args.putParcelable(ARGUMENT_USER, user);
-    fragment.setArguments(args)
-    return fragment;
-}
-</code></p>
-
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> <span class="dt">static</span> UserFragment <span class="fu">newInstance</span>(User user) {
+    UserFragment fragment = <span class="kw">new</span> UserFragment;
+    Bundle args = <span class="kw">new</span> <span class="fu">Bundle</span>();
+    args.<span class="fu">putParcelable</span>(ARGUMENT_USER, user);
+    fragment.<span class="fu">setArguments</span>(args)
+    <span class="kw">return</span> fragment;
+}</code></pre></div>
 <p><strong>Note 1</strong>: These methods should go at the top of the class before <code>onCreate()</code>.</p>
-
 <p><strong>Note 2</strong>: If we provide the methods described above, the keys for extras and arguments should be <code>private</code> because there is not need for them to be exposed outside the class.</p>
-
-<h3>2.2.15 Line length limit</h3>
-
+<h3 id="line-length-limit">2.2.15 Line length limit</h3>
 <p>Code lines should not exceed <strong>100 characters</strong>. If the line is longer than this limit there are usually two options to reduce its length:</p>
-
 <ul>
 <li>Extract a local variable or method (preferable).</li>
 <li>Apply line-wrapping to divide a single line into multiple ones.</li>
 </ul>
-
 <p>There are two <strong>exceptions</strong> where it is possible to have lines longer than 100:</p>
-
 <ul>
 <li>Lines that are not possible to split, e.g. long URLs in comments.</li>
 <li><code>package</code> and <code>import</code> statements.</li>
 </ul>
-
-<h4>2.2.15.1 Line-wrapping strategies</h4>
-
+<h4 id="line-wrapping-strategies">2.2.15.1 Line-wrapping strategies</h4>
 <p>There isn't an exact formula that explains how to line-wrap and quite often different solutions are valid. However there are a few rules that can be applied to common cases.</p>
-
 <p><strong>Break at operators</strong></p>
-
 <p>When the line is broken at an operator, the break comes <strong>before</strong> the operator. For example:</p>
-
-<p><code>java
-int longName = anotherVeryLongVariable + anEvenLongerOne - thisRidiculousLongOne
-        + theFinalOne;
-</code></p>
-
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="dt">int</span> longName = anotherVeryLongVariable + anEvenLongerOne - thisRidiculousLongOne
+        + theFinalOne;</code></pre></div>
 <p><strong>Assignment Operator Exception</strong></p>
-
 <p>An exception to the <code>break at operators</code> rule is the assignment operator <code>=</code>, where the line break should happen <strong>after</strong> the operator.</p>
-
-<p><code>java
-int longName =
-        anotherVeryLongVariable + anEvenLongerOne - thisRidiculousLongOne + theFinalOne;
-</code></p>
-
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="dt">int</span> longName =
+        anotherVeryLongVariable + anEvenLongerOne - thisRidiculousLongOne + theFinalOne;</code></pre></div>
 <p><strong>Method chain case</strong></p>
-
 <p>When multiple methods are chained in the same line - for example when using Builders - every call to a method should go in its own line, breaking the line before the <code>.</code></p>
-
-<p><code>java
-Picasso.with(context).load("http://ribot.co.uk/images/sexyjoe.jpg").into(imageView);
-</code></p>
-
-<p><code>java
-Picasso.with(context)
-        .load("http://ribot.co.uk/images/sexyjoe.jpg")
-        .into(imageView);
-</code></p>
-
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java">Picasso.<span class="fu">with</span>(context).<span class="fu">load</span>(<span class="st">&quot;http://ribot.co.uk/images/sexyjoe.jpg&quot;</span>).<span class="fu">into</span>(imageView);</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java">Picasso.<span class="fu">with</span>(context)
+        .<span class="fu">load</span>(<span class="st">&quot;http://ribot.co.uk/images/sexyjoe.jpg&quot;</span>)
+        .<span class="fu">into</span>(imageView);</code></pre></div>
 <p><strong>Long parameters case</strong></p>
-
 <p>When a method has many parameters or its parameters are very long, we should break the line after every comma <code>,</code></p>
-
-<p><code>java
-loadPicture(context, "http://ribot.co.uk/images/sexyjoe.jpg", mImageViewProfilePicture, clickListener, "Title of the picture");
-</code></p>
-
-<p><code>java
-loadPicture(context,
-        "http://ribot.co.uk/images/sexyjoe.jpg",
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="fu">loadPicture</span>(context, <span class="st">&quot;http://ribot.co.uk/images/sexyjoe.jpg&quot;</span>, mImageViewProfilePicture, clickListener, <span class="st">&quot;Title of the picture&quot;</span>);</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="fu">loadPicture</span>(context,
+        <span class="st">&quot;http://ribot.co.uk/images/sexyjoe.jpg&quot;</span>,
         mImageViewProfilePicture,
         clickListener,
-        "Title of the picture");
-</code></p>
-
-<h3>2.2.16 RxJava chains styling</h3>
-
+        <span class="st">&quot;Title of the picture&quot;</span>);</code></pre></div>
+<h3 id="rxjava-chains-styling">2.2.16 RxJava chains styling</h3>
 <p>Rx chains of operators require line-wrapping. Every operator must go in a new line and the line should be broken before the <code>.</code></p>
-
-<p><code>java
-public Observable&lt;Location&gt; syncLocations() {
-    return mDatabaseHelper.getAllLocations()
-            .concatMap(new Func1&lt;Location, Observable&lt;? extends Location&gt;&gt;() {
-                @Override
-                 public Observable&lt;? extends Location&gt; call(Location location) {
-                     return mRetrofitService.getLocation(location.id);
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="kw">public</span> Observable&lt;Location&gt; <span class="fu">syncLocations</span>() {
+    <span class="kw">return</span> mDatabaseHelper.<span class="fu">getAllLocations</span>()
+            .<span class="fu">concatMap</span>(<span class="kw">new</span> Func1&lt;Location, Observable&lt;? <span class="kw">extends</span> Location&gt;&gt;() {
+                <span class="fu">@Override</span>
+                 <span class="kw">public</span> Observable&lt;? <span class="kw">extends</span> Location&gt; <span class="fu">call</span>(Location location) {
+                     <span class="kw">return</span> mRetrofitService.<span class="fu">getLocation</span>(location.<span class="fu">id</span>);
                  }
             })
-            .retry(new Func2&lt;Integer, Throwable, Boolean&gt;() {
-                 @Override
-                 public Boolean call(Integer numRetries, Throwable throwable) {
-                     return throwable instanceof RetrofitError;
+            .<span class="fu">retry</span>(<span class="kw">new</span> Func2&lt;Integer, Throwable, Boolean&gt;() {
+                 <span class="fu">@Override</span>
+                 <span class="kw">public</span> Boolean <span class="fu">call</span>(Integer numRetries, Throwable throwable) {
+                     <span class="kw">return</span> throwable <span class="kw">instanceof</span> RetrofitError;
                  }
             });
-}
-</code></p>
-
-<h2>2.3 XML style rules</h2>
-
-<h3>2.3.1 Use self closing tags</h3>
-
-<p>When an XML element doesn\'t have any contents, you <strong>must</strong> use self closing tags.</p>
-
+}</code></pre></div>
+<h2 id="xml-style-rules">2.3 XML style rules</h2>
+<h3 id="use-self-closing-tags">2.3.1 Use self closing tags</h3>
+<p>When an XML element doesn't have any contents, you <strong>must</strong> use self closing tags.</p>
 <p>This is good:</p>
-
-<p><code>xml
-&lt;TextView
-    android:id="@+id/text_view_profile"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" /&gt;
-</code></p>
-
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;TextView</span>
+<span class="ot">    android:id=</span><span class="st">&quot;@+id/text_view_profile&quot;</span>
+<span class="ot">    android:layout_width=</span><span class="st">&quot;wrap_content&quot;</span>
+<span class="ot">    android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span> <span class="kw">/&gt;</span></code></pre></div>
 <p>This is <strong>bad</strong> :</p>
-
-<p><code>xml
-&lt;!-- Don\'t do this! --&gt;
-&lt;TextView
-    android:id="@+id/text_view_profile"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" &gt;
-&lt;/TextView&gt;
-</code></p>
-
-<h3>2.3.2 Resources naming</h3>
-
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="co">&lt;!-- Don\&#39;t do this! --&gt;</span>
+<span class="kw">&lt;TextView</span>
+<span class="ot">    android:id=</span><span class="st">&quot;@+id/text_view_profile&quot;</span>
+<span class="ot">    android:layout_width=</span><span class="st">&quot;wrap_content&quot;</span>
+<span class="ot">    android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span> <span class="kw">&gt;</span>
+<span class="kw">&lt;/TextView&gt;</span></code></pre></div>
+<h3 id="resources-naming">2.3.2 Resources naming</h3>
 <p>Resource IDs and names are written in <strong>lowercase_underscore</strong>.</p>
-
-<h4>2.3.2.1 ID naming</h4>
-
+<h4 id="id-naming">2.3.2.1 ID naming</h4>
 <p>IDs should be prefixed with the name of the element in lowercase underscore. For example:</p>
-
-<p>| Element            | Prefix            |
-| -----------------  | ----------------- |
-| <code>TextView</code>           | <code>text_</code>             |
-| <code>ImageView</code>          | <code>image_</code>            |
-| <code>Button</code>             | <code>button_</code>           |
-| <code>Menu</code>               | <code>menu_</code>             |</p>
-
+<table>
+<thead>
+<tr class="header">
+<th align="left">Element</th>
+<th align="left">Prefix</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>TextView</code></td>
+<td align="left"><code>text_</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>ImageView</code></td>
+<td align="left"><code>image_</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>Button</code></td>
+<td align="left"><code>button_</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>Menu</code></td>
+<td align="left"><code>menu_</code></td>
+</tr>
+</tbody>
+</table>
 <p>Image view example:</p>
-
-<p><code>xml
-&lt;ImageView
-    android:id="@+id/image_profile"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" /&gt;
-</code></p>
-
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;ImageView</span>
+<span class="ot">    android:id=</span><span class="st">&quot;@+id/image_profile&quot;</span>
+<span class="ot">    android:layout_width=</span><span class="st">&quot;wrap_content&quot;</span>
+<span class="ot">    android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span> <span class="kw">/&gt;</span></code></pre></div>
 <p>Menu example:</p>
-
-<p><code>xml
-&lt;menu&gt;
-    &lt;item
-        android:id="@+id/menu_done"
-        android:title="Done" /&gt;
-&lt;/menu&gt;
-</code></p>
-
-<h4>2.3.2.2 Strings</h4>
-
-<p>String names start with a prefix that identifies the section they belong to. For example <code>registration_email_hint</code> or <code>registration_name_hint</code>. If a string <strong>doesn\'t belong</strong> to any section, then you should follow the rules below:</p>
-
-<p>| Prefix             | Description                           |
-| -----------------  | --------------------------------------|
-| <code>error_</code>             | An error message                      |
-| <code>msg_</code>               | A regular information message         |
-| <code>title_</code>             | A title, i.e. a dialog title          |
-| <code>action_</code>            | An action such as "Save" or "Create"  |</p>
-
-<h4>2.3.2.3 Styles and Themes</h4>
-
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;menu&gt;</span>
+    <span class="kw">&lt;item</span>
+<span class="ot">        android:id=</span><span class="st">&quot;@+id/menu_done&quot;</span>
+<span class="ot">        android:title=</span><span class="st">&quot;Done&quot;</span> <span class="kw">/&gt;</span>
+<span class="kw">&lt;/menu&gt;</span></code></pre></div>
+<h4 id="strings">2.3.2.2 Strings</h4>
+<p>String names start with a prefix that identifies the section they belong to. For example <code>registration_email_hint</code> or <code>registration_name_hint</code>. If a string <strong>doesn't belong</strong> to any section, then you should follow the rules below:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Prefix</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>error_</code></td>
+<td align="left">An error message</td>
+</tr>
+<tr class="even">
+<td align="left"><code>msg_</code></td>
+<td align="left">A regular information message</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>title_</code></td>
+<td align="left">A title, i.e. a dialog title</td>
+</tr>
+<tr class="even">
+<td align="left"><code>action_</code></td>
+<td align="left">An action such as &quot;Save&quot; or &quot;Create&quot;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="styles-and-themes">2.3.2.3 Styles and Themes</h4>
 <p>Unless the rest of resources, style names are written in <strong>UpperCamelCase</strong>.</p>
-
-<h3>2.3.3 Attributes ordering</h3>
-
+<h3 id="attributes-ordering">2.3.3 Attributes ordering</h3>
 <p>As a general rule you should try to group similar attributes together. A good way of ordering the most common attributes is:</p>
-
-<ol>
+<ol style="list-style-type: decimal">
 <li>View Id</li>
 <li>Style</li>
 <li>Layout width and layout height</li>
 <li>Other layout attributes, sorted alphabetically</li>
 <li>Remaining attributes, sorted alphabetically</li>
 </ol>
-
-<h2>2.4 Tests style rules</h2>
-
-<h3>2.4.1 Unit tests</h3>
-
+<h2 id="tests-style-rules">2.4 Tests style rules</h2>
+<h3 id="unit-tests">2.4.1 Unit tests</h3>
 <p>Test classes should match the name of the class the tests are targeting, followed by <code>Test</code>. For example, if we create a test class that contains tests for the <code>DatabaseHelper</code>, we should name it <code>DatabaseHelperTest</code>.</p>
-
 <p>Test methods are annotated with <code>@Test</code> and should generally start with the name of the method that is being tested, followed by a precondition and/or expected behaviour.</p>
-
 <ul>
 <li>Template: <code>@Test void methodNamePreconditionExpectedBehaviour()</code></li>
 <li>Example: <code>@Test void signInWithEmptyEmailFails()</code></li>
 </ul>
-
 <p>Precondition and/or expected behaviour may not always be required if the test is clear enough without them.</p>
-
-<p>Sometimes a class may contain a large amount of methods, that at the same time require several tests for each method. In this case, it\'s recommendable to split up the test class into multiple ones. For example, if the <code>DataManager</code> contains a lot of methods we may want to divide it into <code>DataManagerSignInTest</code>, <code>DataManagerLoadUsersTest</code>, etc. Generally you will be able to see what tests belong together because they have common <a href="https://en.wikipedia.org/wiki/Test_fixture">test fixtures</a>.</p>
-
-<h3>2.4.2 Espresso tests</h3>
-
+<p>Sometimes a class may contain a large amount of methods, that at the same time require several tests for each method. In this case, it's recommendable to split up the test class into multiple ones. For example, if the <code>DataManager</code> contains a lot of methods we may want to divide it into <code>DataManagerSignInTest</code>, <code>DataManagerLoadUsersTest</code>, etc. Generally you will be able to see what tests belong together because they have common <a href="https://en.wikipedia.org/wiki/Test_fixture">test fixtures</a>.</p>
+<h3 id="espresso-tests">2.4.2 Espresso tests</h3>
 <p>Every Espresso test class usually targets an Activity, therefore the name should match the name of the targeted Activity followed by <code>Test</code>, e.g. <code>SignInActivityTest</code></p>
-
 <p>When using the Espresso API it is a common practice to place chained methods in new lines.</p>
+<div class="sourceCode"><pre class="sourceCode java"><code class="sourceCode java"><span class="fu">onView</span>(<span class="fu">withId</span>(R.<span class="fu">id</span>.<span class="fu">view</span>))
+        .<span class="fu">perform</span>(<span class="fu">scrollTo</span>())
+        .<span class="fu">check</span>(<span class="fu">matches</span>(<span class="fu">isDisplayed</span>()))</code></pre></div>
+<h1 id="license">License</h1>
+<pre><code>Copyright 2015 Ribot Ltd.
 
-<p><code>java
-onView(withId(R.id.view))
-        .perform(scrollTo())
-        .check(matches(isDisplayed()))
-</code></p>
-
-<h1>License</h1>
-
-<p>```
-Copyright 2015 Ribot Ltd.</p>
-
-<p>Licensed under the Apache License, Version 2.0 (the "License");
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at</p>
+You may obtain a copy of the License at
 
-<pre><code>http://www.apache.org/licenses/LICENSE-2.0
-</code></pre>
+    http://www.apache.org/licenses/LICENSE-2.0
 
-<p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-limitations under the License.
-```</p>
+limitations under the License.</code></pre>
 
 	</section></div>
     <!-- FOOTER  -->
