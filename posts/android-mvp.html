@@ -35,7 +35,7 @@
 <li><p><strong>Model (Data Layer)</strong>: this is responsible for retrieving, saving, caching and massaging data. It can communicate with local databases and other data stores as well as with restful APIs or third party SDKs. It is divided in two parts: a group of helpers and a <code>DataManager</code>. The number of helpers vary between project and each of them has a very specific function, e.g. talking to an API or saving data in <code>SharedPreferences</code>. The <code>DataManager</code> combines and transforms the outputs from different helpers using Rx operators so it can: 1) provide meaningful data to the Presenter, 2) group actions that will always happen together. This layer also contains the actual model classes that define how the data structure is.</p></li>
 </ul>
 <div class="figure">
-<img src="./images/architecture_diagram.png" />
+<img src="../images/architecture_diagram.png" />
 
 </div>
 <p>Looking at the diagram from right to left:</p>

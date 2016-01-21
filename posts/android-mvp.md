@@ -8,7 +8,7 @@ The architecture of our Android apps is based on the [MVP](https://en.wikipedia.
 
 * __Model (Data Layer)__: this is responsible for retrieving, saving, caching and massaging data. It can communicate with local databases and other data stores as well as with restful APIs or third party SDKs. It is divided in two parts: a group of helpers and a `DataManager`. The number of helpers vary between project and each of them has a very specific function, e.g. talking to an API or saving data in `SharedPreferences`. The `DataManager` combines and transforms the outputs from different helpers using Rx operators so it can: 1) provide meaningful data to the Presenter,  2) group actions that will always happen together. This layer also contains the actual model classes that define how the data structure is.
 
-![](./images/architecture_diagram.png)
+![](../images/architecture_diagram.png)
 
 Looking at the diagram from right to left:
 
