@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="javajavadog&#39;s blog : recording my life">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+
+    <title>blog.imwmw.com</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+
+          <h1 id="project_title">blog.imwmw.com</h1>
+          <h2 id="project_tagline">recording my life</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+
+<h1 id="architecture-guidelines">Architecture Guidelines</h1>
+<p>The architecture of our Android apps is based on the <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter">MVP</a> (Model View Presenter) pattern.</p>
+<ul>
+<li><p><strong>View (UI layer)</strong>: this is where Activities, Fragments and other standard Android components live. It's responsible for displaying the data received from the presenters to the user. It also handles user interactions and inputs (click listeners, etc) and triggers the right action in the Presenter if needed.</p></li>
+<li><p><strong>Presenter</strong>: presenters subscribe to RxJava Observables provided by the <code>DataManager</code>. They are in charge of handling the subscription lifecycle, analysing/modifying the data returned by the <code>DataManager</code> and calling the appropriate methods in the View in order to display the data.</p></li>
+<li><p><strong>Model (Data Layer)</strong>: this is responsible for retrieving, saving, caching and massaging data. It can communicate with local databases and other data stores as well as with restful APIs or third party SDKs. It is divided in two parts: a group of helpers and a <code>DataManager</code>. The number of helpers vary between project and each of them has a very specific function, e.g. talking to an API or saving data in <code>SharedPreferences</code>. The <code>DataManager</code> combines and transforms the outputs from different helpers using Rx operators so it can: 1) provide meaningful data to the Presenter, 2) group actions that will always happen together. This layer also contains the actual model classes that define how the data structure is.</p></li>
+</ul>
+<div class="figure">
+<img src="./images/architecture_diagram.png" />
+
+</div>
+<p>Looking at the diagram from right to left:</p>
+<ul>
+<li><strong>Helpers (Model)</strong>: A set of classes, each of them with a very specific responsibility. Their function can range from talking to APIs or a database to implementing some specific business logic. Every project will have different helpers but the most common ones are:
+<ul>
+<li><strong>DatabaseHelper</strong>: It handles inserting, updating and retrieving data from a local SQLite database. Its methods return Rx Observables that emit plain java objects (models)</li>
+<li><strong>PreferencesHelper</strong>: It saves and gets data from <code>SharedPreferences</code>, it can return Observables or plain java objects directly.</li>
+<li><strong>Retrofit services</strong> : <a href="http://square.github.io/retrofit">Retrofit</a> interfaces that talk to Restful APIs, each different API will have its own Retrofit service. They return Rx Observables.</li>
+</ul></li>
+<li><p><strong>Data Manager (Model)</strong>: It's a key part of the architecture. It keeps a reference to every helper class and uses them to satisfy the requests coming from the presenters. Its methods make extensive use of Rx operators to combine, transform or filter the output coming from the helpers in order to generate the desired output ready for the Presenters. It returns observables that emit data models.</p></li>
+<li><p><strong>Presenters</strong>: Subscribe to observables provided by the <code>DataManager</code> and process the data in order to call the right method in the View.</p></li>
+<li><p><strong>Activities, Fragments, ViewGroups (View)</strong>: Standard Android components that implement a set of methods that the Presenters can call. They also handle user interactions such as clicks and act accordingly by calling the appropriate method in the Presenter. These components also implement framework-related tasks such us managing the Android lifecycle, inflating views, etc.</p></li>
+<li><p><strong>Event Bus</strong>: It allows the View components to be notified of certain types of events that happen in the Model. Generally the <code>DataManager</code> posts events which can then be subscribed to by Activities and Fragments. The event bus is <strong>only used for very specific actions</strong> that are not related to only one screen and have a broadcasting nature, e.g. the user has signed out.</p></li>
+</ul>
+<h1 id="license">License</h1>
+<pre><code>Copyright 2015 Ribot Ltd.
+
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</code></pre>
+
+	</section></div>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p><a href="http://blog.imwmw.com">http://blog.imwmw.com</a> &copy; 2015 Xiang Li</p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
+
